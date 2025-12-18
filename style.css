@@ -1,0 +1,161 @@
+/* ===== Style général ===== */
+body {
+    background-color: #1a1a1a;
+    color: white;
+    font-family: "Candara", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Bandeau principal avec image ===== */
+header.bandeau {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Assombrir légèrement l'image du bandeau */
+header.bandeau::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 0;
+}
+
+/* Contenu au-dessus de l’overlay */
+header.bandeau * {
+    position: relative;
+    z-index: 1;
+}
+
+header.bandeau h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: "Impact", sans-serif;
+}
+
+/* ===== Menu navigation ===== */
+header.bandeau nav {
+    margin-top: 20px;
+}
+
+header.bandeau nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header.bandeau nav a:hover {
+    background-color: #B73535;
+}
+
+header.bandeau nav a.active {
+    background-color: #932525;
+}
+
+/* ===== Sections ===== */
+section {
+    padding: 40px 20px;
+}
+
+.sectionTitle {
+    text-align: center;
+    color: #AD0E0E;
+}
+
+/* ===== Conteneur de cartes ===== */
+.cardsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+
+/* ===== Cartes composants ===== */
+.componentCard {
+    width: 250px;
+    padding: 15px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.componentCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.componentCard:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Texte des cartes ===== */
+.componentName {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 20px;
+    color: #AD0E0E;
+}
+
+.componentDesc {
+    font-size: 14px;
+    color: white;
+    margin-top: 10px;
+}
+
+.componentImage {
+    max-width: 400px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.infoBox {
+    background-color: #333;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 520px;
+    margin: 20px auto;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+    min-width: 60%;
+}
+
+td {
+    border: 1px solid #555;
+    padding: 10px;
+}
+
+th {
+    background-color: #2a2a2a;
+	padding:5px
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
